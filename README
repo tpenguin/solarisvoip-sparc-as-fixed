@@ -1,0 +1,15 @@
+There is a bug in the Solaris/11 sparc assembler that causes incorrect
+builds of asterisk.  The symtoms are an immediate crash when asterisk
+starts, due to errors in the generated symbol tables.
+
+The file
+   "sparc-as-fixed"
+when installed as /usr/ccs/bin/as, and used with the gcc in
+/usr/sfb/bin that comes with Solaris should fix the problem.
+
+Note this is only a "test" fix that hasn't been completely tested.
+As soon as an official patch is generated, this "test" version of as
+will be removed, and replaced with the patch.
+
+SAU
+Nov 17, 2006
